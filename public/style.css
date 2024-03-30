@@ -1,0 +1,198 @@
+/* Styles for Search page */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ebecf0;
+}
+
+nav {
+  background-color: #181818;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+nav h1 {
+  margin: 0;
+}
+
+.searchInput {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+}
+.searchbox {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.searchbtn {
+  background-color: #404040;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.searchbtn:hover {
+  background-color: #606060;
+}
+
+#searchResults {
+  padding-left: 30px;
+  width: 80vw;
+  max-height: 60vh;
+  overflow-y: auto;
+  border-radius: 20px;
+  margin-top: 20px;
+  background-color: skyblue;
+  display: none;
+}
+
+#searchResults::-webkit-scrollbar {
+  display: none;
+}
+
+#collegeSuggestions {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+#collegeSuggestions option {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+li {
+  font-size: 16px;
+  margin: 10px 10px 0px 0px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  input[type="text"] {
+    width: calc(60% - 10px);
+  }
+
+  li {
+    font-size: 14px;
+  }
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 450px) {
+  input[type="text"] {
+    width: calc(80% - 10px);
+  }
+
+  li {
+    font-size: 10px;
+  }
+}
+
+/* Styles for Index page */
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  width: 60%;
+  margin: 10px auto;
+  padding: 20px;
+  background-color: hsl(2, 20%, 90%);
+  border-radius: 40px;
+}
+
+.card .left,
+.card .right {
+  width: 50%;
+  height: 60%;
+  padding: 20px;
+  margin-right: 10px;
+}
+
+.card .left {
+  background-color: #f2f2f2;
+}
+
+.card .right {
+  background-color: #e6e6e6;
+}
+
+.card h2 {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  font-size: 14px;
+}
+
+.card form {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.card input[type="text"],
+.card input[type="password"],
+.card button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 80%;
+  font-size: 14px;
+}
+
+.card button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+
+@media only screen and (max-width: 770px) {
+  .card {
+    width: 80%;
+    height: 80%;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .card {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .card .left,
+  .card .right {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  .card h2 {
+    font-size: medium;
+  }
+
+
+
+  .card form {
+    margin-top: 20px;
+  }
+}
